@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone API Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <ul>
+          <li><a href="#" id="nav-config" class="nav-link">View Config</a></li>
+          <li><a href="#" id="nav-form" class="nav-link">Log Form</a></li>
+          <li><a href="#" id="nav-logs" class="nav-link">View Logs</a></li>
+        </ul>
+        <!-- ✅ ปุ่มสลับธีม -->
+        <button id="theme-toggle" class="theme-toggle">🌙</button>
+      </nav>
+
+      <section id="page-config" class="active">
+        <h2>Drone Configuration</h2>
+        <div id="config-details">
+          <p>Loading config...</p>
+        </div>
+      </section>
+
+      <section id="page-form">
+        <h2>Temperature Log Form</h2>
+        <form id="log-form">
+          <label for="celsius">
+            Temperature (°C)
+            <input
+              type="number"
+              id="celsius"
+              name="celsius"
+              placeholder="Enter temperature"
+              required
+            />
+          </label>
+          <button type="submit">Submit Data</button>
+        </form>
+      </section>
+
+      <section id="page-logs">
+        <h2>Recent Logs</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Created</th>
+              <th>Country</th>
+              <th>Drone ID</th>
+              <th>Drone Name</th>
+              <th>Celsius</th>
+            </tr>
+          </thead>
+          <tbody id="logs-table-body">
+            <tr>
+              <td colspan="5">Loading logs...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
