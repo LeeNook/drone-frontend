@@ -1,9 +1,14 @@
-:root {
+:root { 
   color-scheme: light dark;
+
+  /* --- โหมดสว่าง --- */
   --bg-color-light: #ffffff;
   --text-color-light: #1a1a1a;
   --card-bg-light: #f2f2f2;
+  --row-odd-light: #ffffff;
+  --row-even-light: #f2f2f2;
 
+  /* --- โหมดมืด --- */
   --bg-color: #1e1e2f;
   --card-bg: #2a2a40;
   --text-color: #f5f5f5;
@@ -12,6 +17,9 @@
   --border-color: #3a3a55;
   --success: #28c76f;
   --error: #ff4d4f;
+  --row-odd: #2a2a40;
+  --row-even: #22223a;
+
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.5;
   color: var(--text-color);
@@ -23,20 +31,21 @@
   --card-bg: #2a2a40;
   --text-color: #f5f5f5;
   --border-color: #3a3a55;
+  --row-odd: #2a2a40;
+  --row-even: #22223a;
 }
 
-/* 🎨 ปรับโหมดสว่างให้ชัดขึ้น */
+/* ปรับโหมดสว่าง */
 :root:not(.dark) {
-  --bg-color: #f8f9fa;          /* สีพื้นหลังหลักอ่อน ๆ */
-  --card-bg: #ffffff;           /* สีการ์ดขาว */
-  --text-color: #121212;        /* สีตัวหนังสือเข้ม */
-  --accent-color: #3366ff;      /* สีฟ้าอ่อน */
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #121212;
+  --accent-color: #3366ff;
   --accent-hover: #1a4ed8;
   --border-color: #d1d1d1;
+  --row-odd: #ffffff;
+  --row-even: #f2f2f2;
 }
-
-
-
 
 body {
   margin: 0;
@@ -98,13 +107,12 @@ section.active {
 }
 #config-details p {
   margin: 0.5rem 0;
-  background-color: var(--card-bg);  /* ใช้ตัวแปรธีมแทน */
+  background-color: var(--card-bg);  
   padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  color: var(--text-color);          /* กำหนดสีตัวอักษรตามธีม */
+  color: var(--text-color);          
 }
-
 
 /* Form */
 form {
@@ -125,7 +133,7 @@ input[type="number"] {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   width: 200px;
-  background: #1b1b2b;
+  background-color: var(--card-bg); /* ใช้ธีม */
   color: var(--text-color);
   font-size: 1em;
 }
@@ -164,10 +172,13 @@ th, td {
   border: 1px solid var(--border-color);
 }
 tbody tr:nth-child(even) {
-  background-color: #22223a;
+  background-color: var(--row-even);
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--row-odd);
 }
 tbody tr:hover {
-  background-color: #2e2e4e;
+  background-color: var(--accent-hover);
   transition: background 0.3s ease;
 }
 
