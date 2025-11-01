@@ -1,5 +1,5 @@
 # Drone Frontend WebApp
-เว็บแอปพลิเคชันส่วนหน้า (Frontend) สำหรับระบบ Drone Project พัฒนาโดยใช้ **Node.js + Vite + React (หรือ Framework ที่ใช้)**
+เว็บแอปพลิเคชันส่วนหน้า (Frontend) สำหรับระบบ Drone Project พัฒนาโดยใช้ **Node.js + Vite(หรือ Framework ที่ใช้)**
 
 ## วิธีรันโปรเจกต์
 เข้าไปที่โฟลเดอร์โปรเจกต์
